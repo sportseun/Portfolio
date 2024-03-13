@@ -30,6 +30,17 @@ header {
   text-decoration: none;
   font-weight: 600;
 }
+.logo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #081b29;
+  animation: showRight 1s ease forwards;
+  animation-delay: 0.4s;
+}
 .navbar a {
   font-size: 18px;
   color: #ededed;
@@ -46,6 +57,8 @@ header {
 }
 /* 여기서부터 홈섹션 */
 .home {
+  background: url("images/home.jpg") no-repeat center;
+  background-size: cover;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -58,6 +71,18 @@ header {
   font-size: 56px;
   font-weight: 700;
   line-height: 1.2;
+  position: relative;
+}
+.home-content h1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #081b29;
+  animation: showRight 1s ease forwards;
+  animation-delay: 1s;
 }
 .home-content h3 {
   font-size: 32px;
@@ -153,4 +178,22 @@ header {
 }
 .home-sci a:hover {
   color: #081b29;
+}
+.home-imgHover {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  width: 40%;
+  height: 100%;
+  background-color: transparent;
+  transition: 3s;
+}
+.home-imgHover:hover {
+  background-color: #081b29;
+  opacity: 0.7;
+}
+@keyframes showRight {
+  100% {
+    width: 0;
+  }
 }
